@@ -37,7 +37,7 @@ function UploadRecipe() {
           }
         );
 
-        setResponse(transcriptionResponse.data);
+        setResponse(transcriptionResponse.data.text);
 
         // https://api.openai.com/v1/completions
         // ./recipe_example.json
@@ -56,7 +56,6 @@ function UploadRecipe() {
             },
           }
         );
-        console.log('response', summaryResponse);
 
         if (summaryResponse.data.choices && summaryResponse.data.choices.length > 0 && summaryResponse.data.choices[0].text) {
           const recipeText = summaryResponse.data.choices[0].text;
@@ -83,7 +82,12 @@ function UploadRecipe() {
       />
       {recipe && <div dangerouslySetInnerHTML={{ __html: recipe }} />}
 
-      {response && <div>{JSON.stringify(response, null, 2)}</div>}
+      {response && (
+        <div className="transcription-container">
+          <div className="transcription"><strong>Transcription: </strong>{JSON.stringify(response, null, 2)}</div>
+        </div>
+      )}
+
 
     </div>
   );
