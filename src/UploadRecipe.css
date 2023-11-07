@@ -1,0 +1,73 @@
+.recipe {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.recipe_title,
+.recipe-ingredient-title,
+.recipe-steps-title {
+  color: #333;
+}
+
+.recipe-ingredients {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.recipe-ingredients th,
+.recipe-ingredients td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+.recipe-ingredients th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.recipe-ingredients td {
+  background-color: #ffffff;
+}
+
+.recipe-ingredients tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+
+.recipe-steps {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.recipe-steps li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.recipe-steps li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+}
+
+ol.recipe-steps {
+  counter-reset: step;
+}

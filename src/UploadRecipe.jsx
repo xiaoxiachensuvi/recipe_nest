@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+import './UploadRecipe.css';
 
 const VITE_OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
@@ -39,11 +40,12 @@ function UploadRecipe() {
         setResponse(transcriptionResponse.data);
 
         // https://api.openai.com/v1/completions
+        // ./recipe_example.json
         const summaryResponse = await axios.post(
-          './recipe_example.json',
+          'https://api.openai.com/v1/completions',
           {
             model: 'gpt-3.5-turbo-instruct',
-            prompt: `Please summarise the text field as a recipe. The recipe should have a title of recipe name and two sections. the first section list down a table of all ingredients and the amount in a table, this section is titled with "Ingredient" wrapped in HTML tag <H2>. If the text contains a sequence of instructions, create a second section list down the steps, this section is title with "Steps" wrapped in HTML tag <H2>. The HTML is wrapped in <div class="recipe">, assuming it'll be put directly under <body> tag. Text = ${JSON.stringify(transcriptionResponse.data, null, 2)}`,
+            prompt: `Please summarise the text field as a recipe in HTML format. The HTML is wrapped in <div class="recipe">, assuming it'll be put directly under <body> tag. The recipe should have a title of recipe name and two sections. The title of the recipe is wrapped with <H2 class="recipe_title">.  The first section list down a table of all ingredients and the amount. This section is titled with "Ingredient" wrapped in HTML tag <H3 ="recipe-ingredient-title">. The table is wrapped with HTML <table class="recipe-ingredient">. If the text contains a sequence of instructions, create a second section list down the steps. This section is title with "Steps" wrapped in HTML tag <H2 class="recipe-steps-title">. The steps are listed in HTML tag <ol class="recipe-steps">. Text = ${JSON.stringify(transcriptionResponse.data, null, 2)}`,
             max_tokens: 1024,
             temperature: 0,
           },
