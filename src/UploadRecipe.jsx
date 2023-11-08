@@ -72,7 +72,7 @@ function UploadRecipe() {
   }, [file]);
 
   return (
-    <div>
+    <div className="container">
       <input
         ref={inputRef}
         type='file'
