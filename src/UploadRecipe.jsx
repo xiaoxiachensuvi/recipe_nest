@@ -24,10 +24,10 @@ function UploadRecipe() {
       formData.append('file', file);
 
       // https://api.openai.com/v1/audio/transcriptions
-      //
+      // ./transcription_example.json
       try {
         const transcriptionResponse = await axios.post(
-          './transcription_example.json',
+          'https://api.openai.com/v1/audio/transcriptions',
           formData,
           {
             headers: {
