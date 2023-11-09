@@ -1,0 +1,19 @@
+{
+    "id": "cmpl-8IAyxahJMhXAAzcCK4XDf9b5fFmkK",
+    "object": "text_completion",
+    "created": 1699342811,
+    "model": "gpt-3.5-turbo-instruct",
+    "choices": [
+        {
+            "text": "\n\n<div class=\"recipe\">\n  <h2>Ingredients</h2>\n  <table>\n    <tr>\n      <th>Ingredient</th>\n      <th>Amount</th>\n    </tr>\n    <tr>\n      <td>All-purpose flour</td>\n      <td>240 grams</td>\n    </tr>\n    <tr>\n      <td>Sugar</td>\n      <td>200 grams</td>\n    </tr>\n    <tr>\n      <td>Cocoa powder</td>\n      <td>500 grams</td>\n    </tr>\n    <tr>\n      <td>Baking soda</td>\n      <td>1.5 tablespoons</td>\n    </tr>\n    <tr>\n      <td>Kosher salt</td>\n      <td>1 teaspoon</td>\n    </tr>\n    <tr>\n      <td>Vegetable oil</td>\n      <td>1/2 cup</td>\n    </tr>\n    <tr>\n      <td>Whole milk</td>\n      <td>1 cup</td>\n    </tr>\n    <tr>\n      <td>Vanilla extract</td>\n      <td>1 teaspoon</td>\n    </tr>\n    <tr>\n      <td>Eggs</td>\n      <td>2 large, room temperature</td>\n    </tr>\n    <tr>\n      <td>Chocolate chips</td>\n      <td>1/2 cup, plus extra for topping</td>\n    </tr>\n    <tr>\n      <td>Hot water</td>\n      <td>1 cup</td>\n    </tr>\n  </table>\n  <h2>Steps</h2>\n  <ol>\n    <li>In a large bowl, mix together the flour, sugar, cocoa powder, baking soda, and salt.</li>\n    <li>Sift the dry ingredients and mix with a whisk.</li>\n    <li>In a separate bowl, mix together the vegetable oil, milk, vanilla extract, and eggs.</li>\n    <li>Pour the wet ingredients into the dry ingredients and whisk until well combined.</li>\n    <li>Add in the chocolate chips and mix well.</li>\n    <li>Pour the batter into greased pans and top with extra chocolate chips.</li>\n    <li>Bake in a preheated oven at 175 degrees for 35 minutes.</li>\n    <li>Once done, remove from oven and let cool before serving.</li>\n  </ol>\n</div>",
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 374,
+        "completion_tokens": 532,
+        "total_tokens": 906
+    }
+}
